@@ -23,9 +23,18 @@ module.exports = (req, res) => {
     } else {
       const lat = resp.body.results[0].geometry.location.lat;
       const lng = resp.body.results[0].geometry.location.lng;
-      const html = '';
-
+      
       // Use coordinate attributes to embed street view panorama
+      const html = `
+        <iframe width="600" height="300" frameborder="0" style="border:0"
+          src="https://www.google.com/maps/embed/v1/streetview?" + 
+              "key=${key.embed_key}&location=${lat}, ${lng}" 
+          allowfullscreen>
+        </iframe>`;
+
+      res.json({
+        body: html
+      });
     }
   });
 };
