@@ -27,8 +27,8 @@ module.exports = (req, res) => {
       timeout: 10 * 1000
     }, (err, resp) => {
       if (err) {
-        res.status(500).send('Error');
         console.log(err);
+        res.status(500).send('Error');
 
       } else {
         // Map predictions to populate search drawer
