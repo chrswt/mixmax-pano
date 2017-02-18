@@ -1,0 +1,23 @@
+{
+  "name": "mixmax-pano",
+  "version": "1.0.0",
+  "description": "Google 360-panorama integration for Mixmax email client",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chrswt/mixmax-pano.git"
+  },
+  "keywords": [
+    "mixmax",
+    "google-api"
+  ],
+  "author": "Christopher Tham <chriswt91@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chrswt/mixmax-pano/issues"
+  },
+  "homepage": "https://github.com/chrswt/mixmax-pano#readme"
+}
