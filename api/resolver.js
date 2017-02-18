@@ -2,6 +2,7 @@ const key     = require('../utils/key');
 const request = require('request');
 
 module.exports = (req, res) => {
+  // Extract the user-selected term
   const term = req.query.text.trim();
 
   // Retrieve geocode for user-specified location
@@ -21,6 +22,7 @@ module.exports = (req, res) => {
       res.status(500).send('Error');
 
     } else {
+      // Extract lat and lng from geocode API repsonse
       const lat = resp.body.results[0].geometry.location.lat;
       const lng = resp.body.results[0].geometry.location.lng;
       
@@ -31,6 +33,7 @@ module.exports = (req, res) => {
           allowfullscreen>
         </iframe>`;
 
+      // Render generated iframe
       res.json({
         body: html
       });
