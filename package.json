@@ -19,5 +19,12 @@
   "bugs": {
     "url": "https://github.com/chrswt/mixmax-pano/issues"
   },
-  "homepage": "https://github.com/chrswt/mixmax-pano#readme"
+  "homepage": "https://github.com/chrswt/mixmax-pano#readme",
+  "dependencies": {
+    "cors": "^2.8.1",
+    "express": "^4.14.1",
+    "https": "^1.0.0",
+    "pem": "^1.9.4",
+    "request": "^2.79.0"
+  }
 }
