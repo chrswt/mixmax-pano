@@ -24,14 +24,23 @@ module.exports = (req, res) => {
       },
       gzip: true,
       json: true,
-      timeout: 10 * 1000 
+      timeout: 10 * 1000
     }, (err, resp) => {
       if (err) {
         res.status(500).send('Error');
         console.log(err);
 
       } else {
-        console.log(resp.body.predictions);
+        // Map predictions to populate search drawer
+        let results = resp.body.predictions.map((place) => {
+          return {
+            title: `<div>${place.description}</div>`,
+            text: place.description
+          }
+        });
+
+        // Render results
+        res.json(results);
       }
     });
   }
