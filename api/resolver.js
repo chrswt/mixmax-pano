@@ -27,8 +27,7 @@ module.exports = (req, res) => {
       // Use coordinate attributes to embed street view panorama
       const html = `
         <iframe width="600" height="300" frameborder="0" style="border:0"
-          src="https://www.google.com/maps/embed/v1/streetview?" + 
-              "key=${key.embed_key}&location=${lat}, ${lng}" 
+          src="https://www.google.com/maps/embed/v1/streetview?key=${key.embed_key}&location=${lat}, ${lng}" 
           allowfullscreen>
         </iframe>`;
 
